@@ -16,7 +16,7 @@ public class OutputScreen {
 		System.out.println();
 		System.out.println("         *************         Welcome to Company Lockers Pvt. Ltd  *************");
 		System.out.println("                  *************      (LockedMe.com)        *************");
-		System.out.println("            *************      Developed by Mohd Azeemuddin      *************");
+		System.out.println("            *************      Developed by Lakshmi Thejaswini Sunka    *************");
 		System.out.println();
 		System.out.println("*********************************************************************************************");
 	}
@@ -67,18 +67,18 @@ public class OutputScreen {
 		System.out.print("Enter the option--> ");
 		try {
 			
-			int input = sc.nextInt();
+			String input = sc.next();
 			switch (input) {
-			case 1:
+			case "1":
 				func.addFile();
 				break;
-			case 2:
+			case "2":
 				func.deleteFileByName();
 				break;
-			case 3:
+			case "3":
 				func.getFileByName();
 				break;
-			case 4:
+			case "4":
 				func.quitApplication();
 				break;
 			default:
@@ -89,6 +89,7 @@ public class OutputScreen {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
+			functionalityOptions();
 			return;
 		}
 

@@ -32,10 +32,10 @@ public class Functionality {
 		} catch (IOException e) {
 			System.out.println("File Creation Failed !");
 		}
+
 		os.functionalityOptions();
+
 	}
-
-
 	public void getAllFiles() {
 
 		System.out.println("*********************************************************************************************");
@@ -43,7 +43,7 @@ public class Functionality {
 		File directoryPath = new File(folderPath);
 		String contents[] = directoryPath.list();
 		if (contents.length>0) {
-			System.out.println("           **********   Below are the available files in the directory.  *************");
+			System.out.println("           **********   The available files in the directory.  *************");
 			for (int i = 0; i < contents.length; i++) {
 				System.out.println((i+1)+". "+contents[i]);
 			}
@@ -60,8 +60,8 @@ public class Functionality {
 			System.out.print("Enter the file name to Search: ");
 			String value = sc.next();
 			File directoryPath = new File(folderPath+ value);
-//			String contents[] = directoryPath.list();
-			
+			//			String contents[] = directoryPath.list();
+
 			if (directoryPath.exists()) {
 				System.out.println(value + " is Available!");
 			} else {
